@@ -10,7 +10,7 @@ ZIP‑Auditor — Простая программа для тех, кто заб
 
 🛑 Остановка в любой момент — прервите процесс одной кнопкой, лог очистится, и вы увидите итоговый статус.
 
-📜 Умный лог — уведомления о прогрессе каждые 100 тысяч комбинаций.
+📜 Умный лог — уведомления о прогрессе каждые 250 тысяч комбинаций.
 
 🌐 Два языка — интерфейс полностью переведён на русский и английский, переключение в один клик.
 
@@ -42,7 +42,7 @@ It runs entirely in RAM, does not create temporary files, and does not load the 
 
 🛑 Stop anytime — interrupt the process with one button; the log is cleared and the final status is shown.
 
-📜 Smart logging — progress notifications appear every 100 thousands combinations.
+📜 Smart logging — progress notifications appear every 250 thousands combinations.
 
 🌐 Two languages — the interface is fully translated into Russian and English, switch in one click.
 
