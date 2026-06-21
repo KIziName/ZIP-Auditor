@@ -173,19 +173,17 @@ class ZipAuditorApp(ctk.CTk):
         self.info_frame = ctk.CTkFrame(self.tab_about)
         self.info_frame.pack(pady=10, padx=10, fill="both", expand=True)
 
-        # Описание – теперь с такими же настройками, как логи
         self.lbl_desc = ctk.CTkLabel(
             self.info_frame, text=self.txt["desc"],
-            font=("Segoe UI", 13),           # увеличен размер
+            font=("Segoe UI", 13),
             justify="left", anchor="nw", wraplength=500,
-            text_color="#E0E0E0"             # единый цвет с логами
+            text_color="#E0E0E0"
         )
         self.lbl_desc.pack(padx=15, pady=(15, 5), fill="x")
 
-        # Ссылка – тоже увеличен размер
         self.link_label = ctk.CTkLabel(
             self.info_frame, text=self.txt["github_link"],
-            font=("Segoe UI", 13, "underline"),  # было 12
+            font=("Segoe UI", 13, "underline"),
             text_color="#1f6aa5", cursor="hand2"
         )
         self.link_label.pack(padx=15, pady=(0, 15), anchor="w")
@@ -336,12 +334,13 @@ class ZipAuditorApp(ctk.CTk):
                 if not self.stop_event.is_set():
                     self.after(0, self.log, "log_express", True)
                 
+                # ИСПРАВЛЕННЫЙ ЭКСПРЕСС-ТЕСТ: Защита дескрипторов + точечная проверка
                 for common_pass in self.BUILTIN_DATABASE:
                     if self.stop_event.is_set():
                         return
                     try:
-                        z_file.setpassword(common_pass.encode('utf-8'))
-                        z_file.read(target_file)
+                        with z_file.open(target_file, pwd=common_pass.encode('utf-8')) as f:
+                            f.read(1)
                         self.found_password = common_pass
                         self.stop_event.set()
                         break
@@ -376,9 +375,10 @@ class ZipAuditorApp(ctk.CTk):
                                     display = f"{count//1000} {self.txt['thousand']}"
                                 self.after(0, self.log, "log_mil_step", display, False)
                             
+                            # ИСПРАВЛЕННЫЙ ГЛУБОКИЙ ПЕРЕБОР: Работает со всеми типами шифрования
                             try:
-                                z_file.setpassword(candidate.encode('utf-8'))
-                                z_file.read(target_file)
+                                with z_file.open(target_file, pwd=candidate.encode('utf-8')) as f:
+                                    f.read(1)
                                 self.found_password = candidate
                                 self.stop_event.set()
                                 break
