@@ -46,13 +46,6 @@ import pyzipper as zipfile
 import customtkinter as ctk
 from tkinter import filedialog
 
-# === МЬЮТЕКС ===
-MUTEX_NAME = "Global\\ZIP_Auditor_V1.0_2026"
-kernel32 = ctypes.windll.kernel32
-if kernel32.CreateMutexW(None, False, MUTEX_NAME) is None or kernel32.GetLastError() == 183:
-    ctypes.windll.user32.MessageBoxW(0, "Приложение уже запущено!\nРазрешена только одна копия.", "Ошибка", 0x10)
-    sys.exit(0)
-
 # === ЛОКАЛИЗАЦИЯ ===
 LOCALIZATION = {
     "Русский": {
