@@ -2,6 +2,7 @@
 import sys
 import ctypes
 import atexit
+import os
 
 def _init_system_wide_mutex():
     kernel32 = ctypes.windll.kernel32
@@ -30,17 +31,13 @@ def _init_system_wide_mutex():
         
     atexit.register(lambda: kernel32.CloseHandle(mutex_handle) if mutex_handle else None)
 
-import os
 _init_system_wide_mutex()
 # ======================================================================
 
-import sys
-import os
 import time
 import string
 import itertools
 import threading
-import ctypes
 import webbrowser
 import pyzipper as zipfile
 import customtkinter as ctk
