@@ -1,4 +1,4 @@
-#ZIP‑Auditor
+# ZIP‑Auditor
 
 ***ZIP‑Auditor*** is a lightweight utility for recovering forgotten passwords from ZIP archives.
 It runs entirely in RAM, creates no temporary files, and does not stress your disk.
@@ -7,19 +7,19 @@ It runs entirely in RAM, creates no temporary files, and does not stress your di
 
 ---
 
-##📋 Description
+## 📋 Description
 
 The audit runs in two stages:
 
-1. Express Analysis – instant check against a built‑in database of the 100 most common passwords (based on leak statistics).
-2. Deep Brute‑force – sequentially tries all combinations of letters (A‑Z, a‑z) and digits (0‑9) up to 7 characters long.
+1. ***Express Analysis*** – instant check against a built‑in database of the 100 most common passwords (based on leak statistics).
+2. ***Deep Brute‑force*** – sequentially tries all combinations of letters (A‑Z, a‑z) and digits (0‑9) up to 7 characters long.
 
 Progress notifications appear every 250,000 attempts.
 You can interrupt the process at any time with the Stop button.
 
 ---
 
-##⚡ Features
+## ⚡ Features
 
 · ✅ Instant check against a popular‑password database.
 · 🔍 Deep brute‑force up to 7 characters (letters and digits).
@@ -31,9 +31,9 @@ You can interrupt the process at any time with the Stop button.
 
 ---
 
-##🧰 Requirements
+## 🧰 Requirements
 
-· Python 3.8 or higher
+· ***Python*** 3.8 or higher
   · `pip install customtkinter`
   · `pip install pyzipper` (for ZIP archive handling, including AES)
 
