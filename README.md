@@ -1,63 +1,77 @@
-ZIP‑Auditor — Простая программа для тех, кто забыл пароль от своего ZIP‑архива.
+#ZIP‑Auditor
 
-Она работает полностью в оперативной памяти, не создаёт временных файлов и не нагружает диск.
+***ZIP‑Auditor*** is a lightweight utility for recovering forgotten passwords from ZIP archives.
+It runs entirely in RAM, creates no temporary files, and does not stress your disk.
 
-⚡ Возможности
---------------------------------
-✅ Мгновенная проверка — база из 100 самых популярных паролей (по статистике утечек).
+🔐 Supports archives encrypted with ZipCrypto (Legacy) as well as AES‑256.
 
-🔍 Глубокий перебор — если простые пароли не подходят, программа последовательно перебирает все комбинации из букв (A‑Z, a‑z) и цифр (0‑9) длиной до 7 символов.
+---
 
-🛑 Остановка в любой момент — прервите процесс одной кнопкой, лог очистится, и вы увидите итоговый статус.
+##📋 Description
 
-📜 Умный лог — уведомления о прогрессе каждые 250 тысяч комбинаций.
+The audit runs in two stages:
 
-🌐 Два языка — интерфейс полностью переведён на русский и английский, переключение в один клик.
+1. Express Analysis – instant check against a built‑in database of the 100 most common passwords (based on leak statistics).
+2. Deep Brute‑force – sequentially tries all combinations of letters (A‑Z, a‑z) and digits (0‑9) up to 7 characters long.
 
-🌙 Тёмная тема — приятный для глаз дизайн на базе CustomTkinter.
+Progress notifications appear every 250,000 attempts.
+You can interrupt the process at any time with the Stop button.
 
-🔗 Встроенная ссылка на GitHub — всегда под рукой в разделе «О программе».
+---
 
-🎯 Для кого это
------------------------------------
-👤 Обычные пользователи, которые случайно забыли пароль от своего архива.
+##⚡ Features
 
-💼 Системные администраторы, которым нужно восстановить доступ к служебным данным.
+· ✅ Instant check against a popular‑password database.
+· 🔍 Deep brute‑force up to 7 characters (letters and digits).
+· 🛑 Stop the process with one click; the log is cleared.
+· 📜 Smart logging with progress updates.
+· 🌐 Two interface languages: Russian and English (switch on the fly).
+· 🌙 Dark theme based on CustomTkinter.
+· 🔗 Built‑in GitHub link in the «About» section.
 
-🔐 Все, кто хочет проверить надёжность своих паролей — узнайте, как быстро ваш пароль может быть подобран.
+---
 
-⚠️ Важно
-------------------------------------------
-Автор не несёт ответственности за неправомерное использование.
+##🧰 Requirements
 
-ZIP‑Auditor - Simple tool for those who forgot the password to their ZIP archive.
+· Python 3.8 or higher
+  · `pip install customtkinter`
+  · `pip install pyzipper` (for ZIP archive handling, including AES)
 
-It runs entirely in RAM, does not create temporary files, and does not load the disk.
+# ZIP‑Auditor
 
-⚡ Features
------------------------------------------
-✅ Instant check — a built‑in database of the top‑100 most common passwords (based on leak statistics).
+**ZIP‑Auditor** — простая утилита для восстановления доступа к забытому паролю ZIP‑архива.  
+Работает полностью в оперативной памяти, не создаёт временных файлов и не нагружает диск.
 
-🔍 Deep brute‑force — if simple passwords don’t work, the program sequentially tries all combinations of letters (A‑Z, a‑z) and digits (0‑9) up to 7 characters long.
+🔐 Поддерживает архивы, зашифрованные как **ZipCrypto (Legacy)**, так и **AES‑256**.
 
-🛑 Stop anytime — interrupt the process with one button; the log is cleared and the final status is shown.
+---
 
-📜 Smart logging — progress notifications appear every 250 thousands combinations.
+## 📋 Описание
 
-🌐 Two languages — the interface is fully translated into Russian and English, switch in one click.
+Программа выполняет аудит пароля в два этапа:
 
-🌙 Dark theme — eye‑friendly design based on CustomTkinter.
+1. **Экспресс‑анализ** — мгновенная проверка по встроенной базе из 100 самых популярных паролей (основано на статистике утечек).
+2. **Глубокий перебор** — последовательный перебор всех комбинаций из букв (A‑Z, a‑z) и цифр (0‑9) длиной **до 7 символов**.
 
-🔗 Built‑in GitHub link — always accessible in the «About» section.
+Каждые 250 000 попыток в логе появляется уведомление о прогрессе.  
+Аудит можно прервать в любой момент кнопкой «Прервать».
 
-🎯 Who is it for
-----------------------------------------------------------
-👤 Ordinary users who accidentally forgot their archive password.
+---
 
-💼 System administrators who need to recover access to important data.
+## ⚡ Возможности
 
-🔐 Anyone who wants to test the strength of their passwords — see how quickly your password could be cracked.
+- ✅ Мгновенная проверка по базе популярных паролей.
+- 🔍 Глубокий перебор до 7 символов (буквы и цифры).
+- 🛑 Остановка процесса одной кнопкой с очисткой лога.
+- 📜 Умное логирование с уведомлениями о прогрессе.
+- 🌐 Два языка интерфейса: русский и английский (переключение в один клик).
+- 🌙 Тёмная тема на основе `CustomTkinter`.
+- 🔗 Встроенная ссылка на GitHub в разделе «О программе».
 
-⚠️ Important
---------------------------------------------------------
-The author is not responsible for misuse.
+---
+
+## 🧰 Требования
+
+- **Python 3.8** или выше
+  - `pip install customtkinter`
+  - `pip install pyzipper` (для работы с ZIP‑архивами)
