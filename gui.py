@@ -3,6 +3,7 @@ import time
 import threading
 import webbrowser
 import customtkinter as ctk
+
 from tkinter import filedialog
 from locales import LOCALIZATION
 from core import run_audit
