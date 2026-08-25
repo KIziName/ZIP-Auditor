@@ -3,6 +3,7 @@ import time
 import string
 import itertools
 import pyzipper as zipfile
+
 from locales import BUILTIN_DATABASE
 
 def check_password_fast(active_z_file, filename, pwd_str, is_old_crypto):
