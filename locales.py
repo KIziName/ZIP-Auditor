@@ -93,17 +93,13 @@ BUILTIN_DATABASE = [
     "harper", "evelyn"
 ]
 
-# Параметры аудита
-MAX_PASSWORD_LENGTH = 7              # максимальная длина перебора (символов)
-LOG_REPORT_STEP = 250_000            # количество проверок между отчётами о прогрессе
+MAX_PASSWORD_LENGTH = 7            
+LOG_REPORT_STEP = 250_000            
 
-# Размеры чтения для проверки пароля (оптимизация)
 CHECK_READ_SIZE_LEGACY = 1024        # для ZipCrypto (1 КБ)
 CHECK_READ_SIZE_AES = 1              # для AES (1 байт)
 
-# Набор символов для глубокого перебора (латиница + цифры)
 BRUTE_CHARSET = string.ascii_lowercase + string.ascii_uppercase + string.digits
 
-# Параметры GUI
 WINDOW_WIDTH = 580
 WINDOW_HEIGHT = 560
