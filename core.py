@@ -78,7 +78,6 @@ def run_audit(zip_path, max_length, stop_event, log_callback, update_status_call
             if not stop_event.is_set():
                 log_callback("log_express", True)
             
-            # 1. База частых паролей
             for common_pass in BUILTIN_DATABASE:
                 if stop_event.is_set():
                     on_finish_callback(time.time() - start_time, None, False)
@@ -88,7 +87,6 @@ def run_audit(zip_path, max_length, stop_event, log_callback, update_status_call
                     stop_event.set()
                     break
 
-            # 2. Глубокий посимвольный Brute-force
             if not found_password and not stop_event.is_set():
                 log_callback("log_deep_start", True)
                 update_status_callback()
