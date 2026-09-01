@@ -29,7 +29,6 @@ class ZipAuditorApp(ctk.CTk):
         self.selected_zip_path = ""
         self.no_password_flag = False
 
-        # --- Шапка ---
         self.header_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.header_frame.pack(pady=(10, 0), padx=15, fill="x")
         self.lbl_title = ctk.CTkLabel(self.header_frame, text="🛡️ ZIP-Auditor", font=("Arial", 18, "bold"))
@@ -38,7 +37,6 @@ class ZipAuditorApp(ctk.CTk):
         self.lang_switch.pack(side="right", padx=5)
         self.lang_switch.set("Русский")
 
-        # --- Вкладки ---
         self.tab_view = ctk.CTkTabview(self, width=560, height=480)
         self.tab_view.pack(pady=(5, 10), padx=10, fill="both", expand=True)
         self.tab_view.add("tab1")
@@ -46,7 +44,6 @@ class ZipAuditorApp(ctk.CTk):
         self.tab_audit = self.tab_view.tab("tab1")
         self.tab_about = self.tab_view.tab("tab2")
 
-        # --- Вкладка "Аудит" ---
         self.file_frame = ctk.CTkFrame(self.tab_audit)
         self.file_frame.pack(pady=10, padx=15, fill="x")
         self.lbl_file = ctk.CTkLabel(self.file_frame, text=self.txt["file_lbl"], font=("Arial", 12, "bold"))
@@ -70,7 +67,6 @@ class ZipAuditorApp(ctk.CTk):
         self.txt_log.pack(pady=15, padx=15)
         self.txt_log.configure(state="disabled")
 
-        # --- Вкладка "О программе" ---
         self.info_frame = ctk.CTkFrame(self.tab_about)
         self.info_frame.pack(pady=10, padx=10, fill="both", expand=True)
 
