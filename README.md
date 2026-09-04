@@ -39,7 +39,7 @@ You can interrupt the process at any time with the Stop button.
 
 ## 🧰 Requirements
 
-· ***Python*** 3.8 or higher
+· ***Python 3.7*** or higher
 
   · `pip install customtkinter`
   
@@ -80,6 +80,6 @@ You can interrupt the process at any time with the Stop button.
 
 ## 🧰 Требования
 
-- **Python 3.8** или выше
+- **Python 3.7** или выше
   - `pip install customtkinter`
   - `pip install pyzipper` (для работы с ZIP‑архивами)
