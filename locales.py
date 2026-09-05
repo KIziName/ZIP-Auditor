@@ -1,40 +1,4 @@
 LOCALIZATION = {
-    "Русский": {
-        "tab_audit": "Аудит",
-        "tab_about": "О программе",
-        "file_lbl": "Файл архива:",
-        "placeholder": "Файл не выбран...",
-        "browse_btn": "📁 Обзор...",
-        "status_wait": "Статус: Ожидание файла",
-        "status_ready": "Статус: Файл готов к аудиту",
-        "status_run": "Статус: Выполнение аудита...",
-        "status_deep": "Статус: Глубокий перебор...",
-        "status_success": "Статус: Доступ восстановлен!",
-        "status_cancel": "Статус: Процесс прерван",
-        "status_fail": "Статус: Пароль не найден",
-        "btn_start": "⚡ Запустить audit [Лимит: 7 знаков]",
-        "btn_stop": "🛑 Прервать audit",
-        "log_init": "Лог: Оповещает каждые 250 000 комбинаций.",
-        "log_no_password": "ℹ️ Архив не защищён паролем.",
-        "status_no_password": "Статус: Без пароля",
-        "log_error_select": "❌ Ошибка: Выберите архив через Обзор!",
-        "log_express": "Запуск экспресс-анализа по базе популярных паролей...",
-        "log_deep_start": "Запуск глубокого анализатора [A-Z, a-z, 0-9]...",
-        "log_len_step": "Анализ комбинаций длиной {} знаков...",
-        "log_mil_step": "Проверено {} {}",
-        "thousand": "тыс",
-        "million": "млн",
-        "log_encryption_type": "🔐 Тип шифрования: {}",
-        "log_crit_err": "❌ Критическая ошибка: {}",
-        "log_found": "🎉 ПАРОЛЬ НАЙДЕН: '{}'",
-        "log_stopped": "⚠️ Операция остановлена пользователем.",
-        "log_not_found": "❌ В рамках лимита в 7 символов ничего не найдено.",
-        "log_session_time": "Время сессии: {:.3f} сек.",
-        "log_divider": "-" * 55,
-        "log_empty_encrypted": "⚠️ Архив содержит только пустые зашифрованные файлы. Проверка пароля невозможна.",
-        "desc": "📋 ОПИСАНИЕ ПРОГРАММЫ\nZIP-Auditor — это высокоскоростная утилита, созданная для экспресс-проверки устойчивости и восстановления доступа к зашифрованным ZIP-архивам.\n\n🧠 КАК ЭТО РАБОТАЕТ?\nАудит проходит полностью в оперативной памяти (ОЗУ) без нагрузки на диск:\n1. Экспресс-анализ: Мгновенная проверка по встроенной базе самых популярных паролей.\n2. Глубокий анализатор: Последовательный посимвольный перебор комбинаций [A-Z, a-z, 0-9].\n\n⚠️ ЛИМИТЫ И ПРОИЗВОДИТЕЛЬНОСТЬ\n• В программе жестко зашит максимальный лимит длины в 7 символов.\n• Если пароль короткий, утилита найдет его сразу и завершит работу.\n• Перебор до 7 знаков генерирует триллионы комбинаций. Время зависит от мощности процессора.\n\n-------------------------------------------------------------------------\n⚙️ ИНФОРМАЦИЯ О СБОРКЕ\n• Автор: KiziName\n• Версия: V1.0\n• Лицензия: BSD 3-Clause License",
-        "github_link": "🔗 GitHub: https://github.com/KIziName/ZIP-Auditor/releases"
-    },
     "English": {
         "tab_audit": "Audit",
         "tab_about": "About",
@@ -68,7 +32,9 @@ LOCALIZATION = {
         "log_session_time": "Session time: {:.3f} sec.",
         "log_divider": "-" * 55,
         "log_empty_encrypted": "⚠️ Archive contains only empty encrypted files. Password check impossible.",
-        "desc": "📋 PROGRAM DESCRIPTION\nZIP-Auditor is a high-speed utility designed to test resilience and restore access to encrypted ZIP archives.\n\n🧠 HOW IT WORKS?\nThe audit runs entirely in Random Access Memory (RAM) without disk load:\n1. Express Analysis: Instant check against a built-in database of most popular passwords.\n2. Deep Analyzer: Sequential character-by-character brute-force of [A-Z, a-z, 0-9] combinations.\n\n⚠️ LIMITS AND PERFORMANCE\n• The program has a hardcoded maximum length limit of 7 characters.\n• If the password is short, the utility will find it instantly and terminate.\n• Brute-forcing up to 7 chars generates trillions of combinations. Time depends on CPU power.\n\n-------------------------------------------------------------------------\n⚙️ BUILD INFO\n• Author: KiziName\n• Version: V1.0\n• License: BSD 3-Clause License",
+        "about_title": "About ZIP-Auditor",
+        "about_version": "Version: V1.0",
+        "about_author": "Author: KiziName",
         "github_link": "🔗 GitHub: https://github.com/KIziName/ZIP-Auditor/releases"
     }
 }
@@ -94,8 +60,8 @@ BUILTIN_DATABASE = [
 MAX_PASSWORD_LENGTH = 7            
 LOG_REPORT_STEP = 250_000            
 
-CHECK_READ_SIZE_LEGACY = 1024        # для ZipCrypto (1 КБ)
-CHECK_READ_SIZE_AES = 1              # для AES (1 байт)
+CHECK_READ_SIZE_LEGACY = 1024  
+CHECK_READ_SIZE_AES = 1              
 
 BRUTE_CHARSET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
