@@ -22,7 +22,6 @@ You can interrupt the process at any time with the Stop button.
 - 🔍 Deep brute‑force up to 7 characters (letters and digits).
 - 🛑 Stop the process with one click; the log is cleared.
 - 📜 Smart logging with progress updates.
-- 🌐 Two interface languages: Russian and English (switch on the fly).
 - 🌙 Dark theme based on `CustomTkinter`.
 - 🔗 Built‑in GitHub link in the «About» section.
 
@@ -57,7 +56,6 @@ You can interrupt the process at any time with the Stop button.
 - 🔍 Глубокий перебор до 7 символов (буквы и цифры).
 - 🛑 Остановка процесса одной кнопкой с очисткой лога.
 - 📜 Умное логирование с уведомлениями о прогрессе.
-- 🌐 Два языка интерфейса: русский и английский (переключение в один клик).
 - 🌙 Тёмная тема на основе `CustomTkinter`.
 - 🔗 Встроенная ссылка на GitHub в разделе «О программе».
 
