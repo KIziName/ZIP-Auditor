@@ -1,4 +1,4 @@
-LOCALIZATION = {
+STRINGS = {
     "English": {
         "tab_audit": "Audit",
         "tab_about": "About",
@@ -59,11 +59,8 @@ BUILTIN_DATABASE = [
 
 MAX_PASSWORD_LENGTH = 7            
 LOG_REPORT_STEP = 250_000            
-
 CHECK_READ_SIZE_LEGACY = 1024  
 CHECK_READ_SIZE_AES = 1              
-
 BRUTE_CHARSET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-
 WINDOW_WIDTH = 580
 WINDOW_HEIGHT = 560
