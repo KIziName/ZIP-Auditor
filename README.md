@@ -4,7 +4,6 @@
 
 🔐 Supports archives encrypted with ZipCrypto (Legacy) as well as AES‑256.
 
----
 
 ## 📋 Description
 
@@ -16,7 +15,6 @@ The audit runs in two stages:
 Progress notifications appear every 250,000 attempts.
 You can interrupt the process at any time with the Stop button.
 
----
 
 ## ⚡ Features
 
@@ -28,7 +26,6 @@ You can interrupt the process at any time with the Stop button.
 - 🌙 Dark theme based on `CustomTkinter`.
 - 🔗 Built‑in GitHub link in the «About» section.
 
----
 
 ## 🧰 Requirements
 
@@ -42,7 +39,6 @@ You can interrupt the process at any time with the Stop button.
 
 🔐 Поддерживает архивы, зашифрованные как **ZipCrypto (Legacy)**, так и **AES‑256**.
 
----
 
 ## 📋 Описание
 
@@ -54,7 +50,6 @@ You can interrupt the process at any time with the Stop button.
 Каждые 250 000 попыток в логе появляется уведомление о прогрессе.  
 Аудит можно прервать в любой момент кнопкой «Прервать».
 
----
 
 ## ⚡ Возможности
 
@@ -66,7 +61,6 @@ You can interrupt the process at any time with the Stop button.
 - 🌙 Тёмная тема на основе `CustomTkinter`.
 - 🔗 Встроенная ссылка на GitHub в разделе «О программе».
 
----
 
 ## 🧰 Требования
 
