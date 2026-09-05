@@ -1,7 +1,6 @@
 # ZIP‑Auditor
 
-***ZIP‑Auditor*** is a lightweight utility for recovering forgotten passwords from ZIP archives.
-It runs entirely in RAM, creates no temporary files, and does not stress your disk.
+***ZIP‑Auditor*** is a lightweight utility for recovering forgotten passwords from ZIP archives.It runs entirely in RAM, creates no temporary files, and does not stress your disk.
 
 🔐 Supports archives encrypted with ZipCrypto (Legacy) as well as AES‑256.
 
@@ -21,34 +20,25 @@ You can interrupt the process at any time with the Stop button.
 
 ## ⚡ Features
 
-· ✅ Instant check against a popular‑password database.
-
-· 🔍 Deep brute‑force up to 7 characters (letters and digits).
-
-· 🛑 Stop the process with one click; the log is cleared.
-
-· 📜 Smart logging with progress updates.
-
-· 🌐 Two interface languages: Russian and English (switch on the fly).
-
-· 🌙 Dark theme based on `CustomTkinter`.
-
-· 🔗 Built‑in GitHub link in the «About» section.
+- ✅ Instant check against a popular‑password database.
+- 🔍 Deep brute‑force up to 7 characters (letters and digits).
+- 🛑 Stop the process with one click; the log is cleared.
+- 📜 Smart logging with progress updates.
+- 🌐 Two interface languages: Russian and English (switch on the fly).
+- 🌙 Dark theme based on `CustomTkinter`.
+- 🔗 Built‑in GitHub link in the «About» section.
 
 ---
 
 ## 🧰 Requirements
 
-· ***Python 3.7*** or higher
-
-  · `pip install customtkinter`
-  
-  · `pip install pyzipper` (for ZIP archive handling, including AES)
+- ***Python 3.7*** or higher
+- `pip install customtkinter`
+- `pip install pyzipper` (for ZIP archive handling, including AES)
 
 # ZIP‑Auditor
 
-**ZIP‑Auditor** — простая утилита для восстановления доступа к забытому паролю ZIP‑архива.  
-Работает полностью в оперативной памяти, не создаёт временных файлов и не нагружает диск.
+**ZIP‑Auditor** — простая утилита для восстановления доступа к забытому паролю ZIP‑архива.Работает полностью в оперативной памяти, не создаёт временных файлов и не нагружает диск.
 
 🔐 Поддерживает архивы, зашифрованные как **ZipCrypto (Legacy)**, так и **AES‑256**.
 
