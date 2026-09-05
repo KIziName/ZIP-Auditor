@@ -1,5 +1,3 @@
-import string
-
 LOCALIZATION = {
     "Русский": {
         "tab_audit": "Аудит",
@@ -99,7 +97,7 @@ LOG_REPORT_STEP = 250_000
 CHECK_READ_SIZE_LEGACY = 1024        # для ZipCrypto (1 КБ)
 CHECK_READ_SIZE_AES = 1              # для AES (1 байт)
 
-BRUTE_CHARSET = string.ascii_lowercase + string.ascii_uppercase + string.digits
+BRUTE_CHARSET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 WINDOW_WIDTH = 580
 WINDOW_HEIGHT = 560
