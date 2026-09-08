@@ -21,6 +21,7 @@ ctk.set_default_color_theme("blue")
 
 
 class ZipAuditorApp(ctk.CTk):
+    
     def __init__(self):
         super().__init__()
         self.title("ZIP-Auditor")
@@ -95,7 +96,6 @@ class ZipAuditorApp(ctk.CTk):
 
         self.log("log_init", force_scroll=True)
 
-    
     def open_about(self):
         about_window = ctk.CTkToplevel(self)
         about_window.title(STRINGS["about_title"])
@@ -126,7 +126,6 @@ class ZipAuditorApp(ctk.CTk):
         
         ctk.CTkButton(frame, text="OK", width=60, command=about_window.destroy).pack(pady=10)
 
-    
     def browse_file(self):
         file_path = filedialog.askopenfilename(
             title="Select ZIP Archive",
@@ -141,14 +140,12 @@ class ZipAuditorApp(ctk.CTk):
             self.entry_file_path.configure(state="disabled")
             self.lbl_status.configure(text=STRINGS["status_ready"], text_color="#2ecc71")
 
-    
     def clear_log(self):
         self.log_history.clear()
         self.txt_log.configure(state="normal")
         self.txt_log.delete("1.0", "end")
         self.txt_log.configure(state="disabled")
 
-    
     def log(self, key, *args, force_scroll=False):
         if self.stop_event.is_set() and key in ("log_mil_step", "log_len_step", "log_express", "log_deep_start"):
             return
@@ -163,7 +160,6 @@ class ZipAuditorApp(ctk.CTk):
             self.txt_log.see("end")
         self.txt_log.configure(state="disabled")
 
-    
     def format_log_line(self, timestamp, key, args):
         raw_text = STRINGS.get(key, key)
         if args:
@@ -183,7 +179,6 @@ class ZipAuditorApp(ctk.CTk):
                 pass
         return f"[{timestamp}] {raw_text}"
 
-    
     def toggle_brute(self):
         if self.is_running:
             self.stop_event.set()
@@ -224,13 +219,11 @@ class ZipAuditorApp(ctk.CTk):
             daemon=True
         ).start()
 
-    
     def set_deep_status(self):
         if not self.stop_event.is_set():
             self.is_deep_mode = True
             self.lbl_status.configure(text=STRINGS["status_deep"], text_color="#f39c12")
 
-    
     def brute_finished(self, elapsed, found_password, no_password_flag):
         self.is_running = False
         self.is_deep_mode = False
