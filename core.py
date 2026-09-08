@@ -11,6 +11,7 @@ from locales import (
     BRUTE_CHARSET
 )
 
+
 def check_password_fast(active_z_file, filename, pwd_str, is_old_crypto):
     try:
         with active_z_file.open(filename, pwd=pwd_str.encode('utf-8')) as f:
@@ -21,6 +22,7 @@ def check_password_fast(active_z_file, filename, pwd_str, is_old_crypto):
         return True
     except Exception:
         return False
+
 
 def is_aes_encrypted(zipinfo):
     extra = zipinfo.extra
@@ -34,6 +36,7 @@ def is_aes_encrypted(zipinfo):
             return True
         i += 4 + data_size
     return False
+
 
 def run_audit(zip_path, max_length, stop_event, log_callback, update_status_callback, on_finish_callback):
     start_time = time.time()
